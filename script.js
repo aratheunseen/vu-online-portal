@@ -65,7 +65,7 @@ function find() {
 
   var roll = "001";
 
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < 300; i++) {
 
     var id = year + session + dept + program + roll;
     roll++;
@@ -75,6 +75,7 @@ function find() {
     var file = path + id + ".jpg";
     
     var imageCode = '<img style="padding: 10px; border-radius: 20px;" height="150px" width="150px" title="' + id + '" src="' + file + '">';
+    
     document.getElementById("showImages").innerHTML = document.getElementById("showImages").innerHTML + imageCode;
   }
 }
