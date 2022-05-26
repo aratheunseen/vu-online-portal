@@ -1,0 +1,53 @@
+body {
+    background: #23262b;
+    color: hsla(0, 0%, 100%, .7);
+    margin: 0;
+    padding: 0;
+}
+
+.search_panel {
+    display: grid;
+    justify-content: center;
+}
+
+input {
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    border: 1px solid #bbb;
+    width: 49%;
+    padding: 10px;
+}
+
+select {
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    border: 1px solid #bbb;
+    width: 49%;
+    color: black;
+    padding: 10px;
+}
+
+.ibutton {
+    border: 1px solid #bbb;
+    padding: 10px;
+    background: #bbb;
+    margin: 5px -2.5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ibutton:hover {
+    background: #ccc;
+}
+
+.frame {
+    max-width: 700px;
+    margin: 0 auto;
+    height: 420px;
+}
+
+@media screen and (max-width: 1080px) {
+    .frame {
+        width: 100%;
+        margin: 0 auto;
+        height: 450px;
+    }
+}
