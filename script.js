@@ -1,4 +1,4 @@
-// View Transcript
+// Archived Results
 function Gets() {
   var id = document.getElementById('id').value;
   var semester = document.getElementById('semester').value;
@@ -11,7 +11,7 @@ function Gets() {
   document.getElementById('showSemester').innerHTML = "Semester : " + semester;
 }
 
-// Keyboard Controller
+// Keyboard Press Controller
 document.onkeydown = function (Keyboard) {
   Keyboard = Keyboard || window.event;
   switch (Keyboard.which || Keyboard.keyCode) {
@@ -25,7 +25,7 @@ document.onkeydown = function (Keyboard) {
 }
 
 
-// Classmates
+// Classmates Finder
 function padLeadingZeros(num, size) {
   var s = num + "";
   while (s.length < size) s = "0" + s;
@@ -73,15 +73,8 @@ function find() {
     roll = padLeadingZeros(roll, 3);
 
     var file = path + id + ".jpg";
-
-    function UrlExists(file) {
-      var http = new XMLHttpRequest();
-      http.open('HEAD', url, false);
-      http.send();
-      if (http.status == 200) {
-        var imageCode = '<img style="padding: 10px; border-radius: 20px;" height="150px" width="150px" title="' + id + '" src="' + file + '">';
-        document.getElementById("showImages").innerHTML = document.getElementById("showImages").innerHTML + imageCode;
-      }
-    }
+    
+    var imageCode = '<img style="padding: 10px; border-radius: 20px;" height="150px" width="150px" title="' + id + '" src="' + file + '">';
+    document.getElementById("showImages").innerHTML = document.getElementById("showImages").innerHTML + imageCode;
   }
 }
